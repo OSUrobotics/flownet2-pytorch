@@ -1,5 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
 import os.path
 
 TAG_CHAR = np.array([202021.25], np.float32)
@@ -60,6 +59,7 @@ def writeFlow(filename,uv,v=None):
 # ref: https://github.com/sampepose/flownet2-tf/
 # blob/18f87081db44939414fc4a48834f9e0da3e69f4c/src/flowlib.py#L240
 def visulize_flow_file(flow_filename, save_dir=None):
+	import matplotlib.pyplot as plt
 	flow_data = readFlow(flow_filename)
 	img = flow2img(flow_data)
 	# plt.imshow(img)
